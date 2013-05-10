@@ -1,4 +1,4 @@
 county_news
 ===========
 
-Places news blaock on County sites
+Places news block on County sites
