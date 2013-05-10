@@ -1,0 +1,31 @@
+#block-views-county_news-block_1 {
+	width:100%;
+}
+
+#block-views-county_news-block_1 .views-row {
+	min-height:65px;
+	margin-bottom:23px;
+}
+
+#block-views-county_news-block_1 .views-field-title,
+#block-views-county_news-block_1 .views-field-field-news-feed-item-description-value {
+	margin-left:97px;
+}
+
+#block-views-county_news-block_1 .views-field-field-news-feed-thumbnail-fid img {
+	float:left;
+	width:64px;
+	padding-top:3px;
+	padding-left:12px;
+}
+
+#block-views-county_news-block_1 .view-footer {
+	text-align: right;
+	margin-bottom:15px;
+}
+
+#block-views-county_news-block_1{
+	border-top: 1px dotted #999;
+	padding-top: 35px;
+	margin-top:10px;
+}

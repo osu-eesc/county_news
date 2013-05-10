@@ -1,0 +1,27 @@
+<?php
+
+include_once('county_news.features.inc');
+
+/**
+ * Implementation of hook_init().
+ */
+function county_news_init() {
+  drupal_add_css(drupal_get_path('module', 'county_news') .'/theme/county_news.css');
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function county_news_form_feeds_import_form_alter(&$form) {
+	if ($form['#importer_id'] == 'home_page_news_feed') {
+		$form['feeds']['FeedsHTTPFetcher']['source']['#default_value'] = 'http://extension.oregonstate.edu/news/feed';
+		$form['feeds']['FeedsXPathParserXML']['xpath']['context']['#default_value'] = '/news/news-item';	
+		$form['feeds']['FeedsXPathParserXML']['xpath']['sources']['xpathparser:0']['#default_value'] = 'nid';
+		$form['feeds']['FeedsXPathParserXML']['xpath']['sources']['xpathparser:1']['#default_value'] = 'title';
+		$form['feeds']['FeedsXPathParserXML']['xpath']['sources']['xpathparser:2']['#default_value'] = 'description';
+		$form['feeds']['FeedsXPathParserXML']['xpath']['sources']['xpathparser:3']['#default_value'] = 'created';
+		$form['feeds']['FeedsXPathParserXML']['xpath']['sources']['xpathparser:4']['#default_value'] = 'thumbnail';
+		$form['feeds']['FeedsXPathParserXML']['xpath']['sources']['xpathparser:5']['#default_value'] = 'link';
+	}
+}
+
